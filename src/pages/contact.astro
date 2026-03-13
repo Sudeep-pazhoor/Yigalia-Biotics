@@ -6,8 +6,78 @@ import Footer from '../components/Footer.astro';
 
 <Layout 
   title="Contact Us - Yigaia Biotics" 
-  description="Get in touch with Yigaia Biotics for product inquiries and healthcare solutions"
+  description="Get in touch with Yigaia Biotics for product inquiries, distribution opportunities, and healthcare solutions. Located in Mumbai, India."
+  keywords="contact Yigaia Biotics, pharmaceutical inquiries Mumbai, medicine distributor contact, healthcare solutions India, pharmaceutical company email"
 >
+  <Fragment slot="head">
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yigaiabiotics.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us",
+          "item": "https://yigaiabiotics.com/contact"
+        }
+      ]
+    })} />
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a doctor's prescription to purchase these medicines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all our pharmaceutical products require a valid prescription from a licensed medical practitioner. We strictly adhere to pharmaceutical regulations and do not sell prescription medicines without proper authorization. Please consult your doctor before using any medication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I verify the authenticity of Yigaia Biotics products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All our products come with proper packaging, batch numbers, and manufacturing details. Each product has a unique identification code that can be verified. We recommend purchasing only from authorized distributors and checking the packaging for any signs of tampering. If you have concerns about product authenticity, please contact us directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if I experience side effects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you experience any adverse effects or side effects while taking our medications, immediately stop using the product and consult your healthcare provider. You should also report the side effects to your doctor who prescribed the medication. For serious reactions, seek emergency medical attention. Keep the product packaging for reference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I store these medications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Store all medications in a cool, dry place away from direct sunlight and moisture. Keep medicines out of reach of children and pets. Do not store in bathrooms or near heat sources. Always check the product label for specific storage instructions. Do not use medications past their expiration date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I take multiple medications together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never combine medications without consulting your doctor or pharmacist. Drug interactions can be dangerous and may reduce effectiveness or cause harmful side effects. Always inform your healthcare provider about all medications, supplements, and herbal products you are currently taking before starting any new treatment."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
   <Header />
   
   <!-- Page Header -->

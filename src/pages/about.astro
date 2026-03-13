@@ -6,8 +6,29 @@ import Footer from '../components/Footer.astro';
 
 <Layout 
   title="About Us - Yigaia Biotics" 
-  description="Learn about Yigaia Biotics, your trusted partner in quality pharmaceutical products since 2021"
+  description="Learn about Yigaia Biotics, your trusted partner in quality pharmaceutical products since 2021. Based in Mumbai, India, we deliver excellence in pharmaceutical care."
+  keywords="about Yigaia Biotics, pharmaceutical company Mumbai, quality medicines India, trusted pharmaceutical partner, healthcare excellence, drug manufacturer Mumbai"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yigaiabiotics.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://yigaiabiotics.com/about"
+        }
+      ]
+    })} />
+  </Fragment>
   <Header />
   
   <!-- Page Header -->

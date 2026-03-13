@@ -60,6 +60,7 @@ const fullImageUrl = new URL(image, siteUrl).toString();
   <meta name="msapplication-TileImage" content="/Logo New.jpeg" />
   <meta name="msapplication-TileColor" content="#19a700" />
   <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="/site.webmanifest" />
   
   <!-- Business Information -->
   <meta name="geo.region" content="IN-MH" />
@@ -102,6 +103,57 @@ const fullImageUrl = new URL(image, siteUrl).toString();
       "https://www.instagram.com/yigaliabiotics"
     ],
     "foundingDate": "2021"
+  })} />
+
+  <!-- WebSite Schema with SearchAction -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Yigaia Biotics",
+    "url": siteUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}/products?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  })} />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Yigaia Biotics",
+    "url": siteUrl,
+    "logo": fullImageUrl,
+    "image": fullImageUrl,
+    "description": "Trusted experts in quality pharmaceutical products since 2021. Offering comprehensive range of medicines for various therapeutic needs.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "email": "yigaliabiotics@gmail.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.instagram.com/yigaliabiotics"
+    ]
   })} />
   
   <!-- Additional head content from pages -->

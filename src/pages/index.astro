@@ -6,6 +6,20 @@ import { products } from '../data/products';
 ---
 
 <Layout title="Yigaia Biotics - Quality Pharmaceutical Products">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yigaiabiotics.com"
+        }
+      ]
+    })} />
+  </Fragment>
   <Header />
   
   <!-- Hero Section -->
