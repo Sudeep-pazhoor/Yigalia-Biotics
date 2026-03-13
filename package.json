@@ -9,7 +9,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pages:deploy": "astro build && npx wrangler pages deploy dist"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
