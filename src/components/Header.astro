@@ -1,0 +1,267 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header id="header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/Logo New.jpeg" alt="Yigaia Biotics Logo" class="logo" />
+      </a>
+      
+      <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class={`nav-link ${currentPath === '/' ? 'active' : ''}`} href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class={`nav-link ${currentPath === '/about' ? 'active' : ''}`} href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class={`nav-link ${currentPath.startsWith('/products') ? 'active' : ''}`} href="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class={`nav-link ${currentPath === '/contact' ? 'active' : ''}`} href="/contact">Contact</a>
+          </li>
+        </ul>
+        
+        <div class="social-links-mobile d-lg-none mt-3">
+          <a href="https://www.instagram.com/yigaliabiotics?igsh=anpnbXplOG9hZHQ4" target="_blank" rel="noopener noreferrer">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="mailto:yigaliabiotics@gmail.com">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  #header {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(25, 167, 0, 0.1);
+  }
+
+  .navbar.scrolled {
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.98);
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-link {
+    color: var(--text-gray) !important;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 8px 0 !important;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-green) !important;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .hamburger {
+    border: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-green);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 10px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: 20px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+
+  .social-links-mobile {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .social-links-mobile a {
+    color: var(--text-gray);
+    transition: color 0.3s ease;
+  }
+
+  .social-links-mobile a:hover {
+    color: var(--primary-green);
+  }
+
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 80px;
+      right: 0;
+      width: 50%;
+      height: calc(100vh - 80px);
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 30px 20px;
+      border-left: 1px solid rgba(25, 167, 0, 0.3);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+
+    .navbar-collapse.show {
+      transform: translateX(0);
+    }
+
+    .navbar-collapse.collapsing {
+      transition: none;
+    }
+
+    .nav-link {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+
+    .social-links-mobile {
+      justify-content: center;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-collapse {
+      width: 70%;
+    }
+  }
+</style>
+
+<script>
+  // Add scroll effect to navbar
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
+
+  // Handle hamburger animation
+  const toggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+  toggler?.addEventListener('click', function() {
+    this.classList.toggle('open');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.navbar') && navbarCollapse?.classList.contains('show')) {
+      toggler?.classList.remove('open');
+      navbarCollapse?.classList.remove('show');
+    }
+  });
+
+  // Close menu when clicking a nav link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggler?.classList.remove('open');
+      navbarCollapse?.classList.remove('show');
+    });
+  });
+
+  // Prevent Bootstrap's default collapsing animation
+  navbarCollapse?.addEventListener('show.bs.collapse', function(e: Event) {
+    e.preventDefault();
+    this.classList.add('show');
+  });
+
+  navbarCollapse?.addEventListener('hide.bs.collapse', function(e: Event) {
+    e.preventDefault();
+    this.classList.remove('show');
+  });
+</script>

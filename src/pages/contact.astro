@@ -1,0 +1,737 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Contact Us - Yigaia Biotics" 
+  description="Get in touch with Yigaia Biotics for product inquiries and healthcare solutions"
+>
+  <Header />
+  
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="page-subtitle">We're here to help with your pharmaceutical needs</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section section-padding">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="contact-info">
+            <h2 class="info-title">Get In Touch</h2>
+            <p class="info-text">Have questions about our products or services? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div class="info-content">
+                  <h4>Location</h4>
+                  <p>Mumbai, India</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="info-content">
+                  <h4>Email</h4>
+                  <a href="mailto:yigaliabiotics@gmail.com">yigaliabiotics@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div class="info-content">
+                  <h4>Instagram</h4>
+                  <a href="https://www.instagram.com/yigaliabiotics?igsh=anpnbXplOG9hZHQ4" target="_blank" rel="noopener noreferrer">@yigaliabiotics</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="business-hours">
+              <h4>Business Hours</h4>
+              <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Your Email <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-control" 
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Please enter a valid email address (e.g., example@domain.com)"
+                  required 
+                />
+                <div class="email-error" style="display: none; color: var(--primary-red); font-size: 0.9rem; margin-top: 5px;">
+                  Please enter a valid email address with a proper domain (e.g., example@gmail.com)
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-control" rows="6" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary-custom btn-lg">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none;">
+                  <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" opacity="0.25"/>
+                    <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                  Sending...
+                </span>
+              </button>
+              
+              <div id="formMessage" class="form-message"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about our pharmaceutical products</p>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Do I need a doctor's prescription to purchase these medicines?</span>
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, all our pharmaceutical products require a valid prescription from a licensed medical practitioner. We strictly adhere to pharmaceutical regulations and do not sell prescription medicines without proper authorization. Please consult your doctor before using any medication.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How can I verify the authenticity of Yigaia Biotics products?</span>
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>All our products come with proper packaging, batch numbers, and manufacturing details. Each product has a unique identification code that can be verified. We recommend purchasing only from authorized distributors and checking the packaging for any signs of tampering. If you have concerns about product authenticity, please contact us directly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>What should I do if I experience side effects?</span>
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>If you experience any adverse effects or side effects while taking our medications, immediately stop using the product and consult your healthcare provider. You should also report the side effects to your doctor who prescribed the medication. For serious reactions, seek emergency medical attention. Keep the product packaging for reference.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How should I store these medications?</span>
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Store all medications in a cool, dry place away from direct sunlight and moisture. Keep medicines out of reach of children and pets. Do not store in bathrooms or near heat sources. Always check the product label for specific storage instructions. Do not use medications past their expiration date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Can I take multiple medications together?</span>
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Never combine medications without consulting your doctor or pharmacist. Drug interactions can be dangerous and may reduce effectiveness or cause harmful side effects. Always inform your healthcare provider about all medications, supplements, and herbal products you are currently taking before starting any new treatment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    padding: 150px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(25, 167, 0, 0.1) 0%, rgba(189, 29, 5, 0.05) 100%);
+  }
+
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .page-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+  }
+
+  .contact-section {
+    background: var(--bg-dark);
+  }
+
+  .contact-section .row {
+    align-items: stretch;
+  }
+
+  .contact-section .col-lg-5,
+  .contact-section .col-lg-7 {
+    display: flex;
+  }
+
+  .contact-info {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .info-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .info-text {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 20px;
+  }
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(25, 167, 0, 0.1);
+    border: 2px solid var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    flex-shrink: 0;
+  }
+
+  .info-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .info-content p,
+  .info-content a {
+    color: var(--text-gray);
+    margin: 0;
+  }
+
+  .info-content a:hover {
+    color: var(--primary-green);
+  }
+
+  .business-hours {
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(25, 167, 0, 0.2);
+  }
+
+  .business-hours h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primary-green);
+  }
+
+  .business-hours p {
+    color: var(--text-gray);
+    margin-bottom: 8px;
+  }
+
+  .contact-form-wrapper {
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(25, 167, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .required {
+    color: var(--primary-red);
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px 18px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(25, 167, 0, 0.2);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(25, 167, 0, 0.2);
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .form-message.success {
+    background: rgba(25, 167, 0, 0.1);
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+    display: block;
+  }
+
+  .form-message.error {
+    background: rgba(189, 29, 5, 0.1);
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
+    display: block;
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .faq-section {
+    padding: 80px 0;
+    background: rgba(5, 5, 5, 1);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+  }
+
+  .section-subtitle {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+  }
+
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(25, 167, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(25, 167, 0, 0.5);
+  }
+
+  .faq-item.active {
+    border-color: var(--primary-green);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 25px 30px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .faq-question:hover {
+    color: var(--primary-green);
+  }
+
+  .faq-question span {
+    flex: 1;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 30px;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 30px 25px 30px;
+  }
+
+  .faq-answer p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .faq-question {
+      padding: 20px;
+      font-size: 1rem;
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 20px 20px 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .contact-section .row {
+      align-items: flex-start;
+    }
+
+    .contact-section .col-lg-5,
+    .contact-section .col-lg-7 {
+      display: block;
+    }
+
+    .contact-info {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+
+    .contact-form-wrapper {
+      padding: 30px 20px;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from 'gsap';
+  import emailjs from '@emailjs/browser';
+
+  // Initialize EmailJS with public key
+  emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
+
+  // Animate contact info
+  gsap.from('.contact-info > *', {
+    x: -50,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.1,
+    ease: 'power3.out'
+  });
+
+  // Animate form
+  gsap.from('.contact-form-wrapper', {
+    x: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out'
+  });
+
+  // Form submission
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const formMessage = document.getElementById('formMessage') as HTMLElement;
+  const btnText = document.querySelector('.btn-text') as HTMLElement;
+  const btnLoading = document.querySelector('.btn-loading') as HTMLElement;
+  const emailInput = document.getElementById('email') as HTMLInputElement;
+  const emailError = document.querySelector('.email-error') as HTMLElement;
+
+  // Email validation function
+  function validateEmail(email: string): boolean {
+    // Comprehensive email validation regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    // Check basic format
+    if (!emailRegex.test(email)) {
+      return false;
+    }
+    
+    // Extract domain part
+    const domain = email.split('@')[1];
+    
+    // Ensure domain has at least one dot and proper extension
+    if (!domain || !domain.includes('.')) {
+      return false;
+    }
+    
+    // Check if extension is at least 2 characters
+    const parts = domain.split('.');
+    const extension = parts[parts.length - 1];
+    
+    if (extension.length < 2) {
+      return false;
+    }
+    
+    return true;
+  }
+
+  // Real-time email validation
+  emailInput.addEventListener('blur', () => {
+    const email = emailInput.value.trim();
+    if (email && !validateEmail(email)) {
+      emailError.style.display = 'block';
+      emailInput.style.borderColor = 'var(--primary-red)';
+    } else {
+      emailError.style.display = 'none';
+      emailInput.style.borderColor = 'rgba(25, 167, 0, 0.2)';
+    }
+  });
+
+  emailInput.addEventListener('input', () => {
+    if (emailError.style.display === 'block') {
+      const email = emailInput.value.trim();
+      if (validateEmail(email)) {
+        emailError.style.display = 'none';
+        emailInput.style.borderColor = 'rgba(25, 167, 0, 0.2)';
+      }
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(form);
+    const email = (formData.get('email') as string).trim();
+    
+    // Validate email before submission
+    if (!validateEmail(email)) {
+      emailError.style.display = 'block';
+      emailInput.style.borderColor = 'var(--primary-red)';
+      emailInput.focus();
+      
+      // Show error message
+      formMessage.className = 'form-message error';
+      formMessage.textContent = 'Please enter a valid email address with a proper domain extension (e.g., .com, .in, .org)';
+      formMessage.style.display = 'block';
+      
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+      
+      return;
+    }
+    
+    // Show loading state
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline-flex';
+    formMessage.style.display = 'none';
+    emailError.style.display = 'none';
+    
+    // Get current time
+    const now = new Date();
+    const timeString = now.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    });
+    
+    // Prepare template parameters matching your EmailJS template
+    const templateParams = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+      time: timeString
+    };
+    
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+      
+      console.log('Email sent successfully:', response);
+      
+      // Reset button
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+      
+      // Show success message
+      formMessage.className = 'form-message success';
+      formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+      formMessage.style.display = 'block';
+      
+      // Reset form
+      form.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      
+      // Reset button
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+      
+      // Show error message
+      formMessage.className = 'form-message error';
+      formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly via email.';
+      formMessage.style.display = 'block';
+      
+      // Hide message after 7 seconds
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 7000);
+    }
+  });
+
+  // FAQ Accordion functionality
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem?.classList.contains('active');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Toggle current FAQ
+      if (!isActive) {
+        faqItem?.classList.add('active');
+      }
+    });
+  });
+</script>

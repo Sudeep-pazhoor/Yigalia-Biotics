@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Page Not Found - Yigaia Biotics">
+  <Header />
+  
+  <section class="error-section">
+    <div class="container">
+      <div class="error-content">
+        <div class="error-animation">
+          <div class="error-number">404</div>
+          <div class="error-icon">
+            <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+        </div>
+        
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-text">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+        
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary-custom">Go Home</a>
+          <a href="/products" class="btn btn-outline-custom">View Products</a>
+        </div>
+        
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <div class="links-grid">
+            <a href="/about">About Us</a>
+            <a href="/products">Products</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .error-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 80px;
+    background: var(--bg-dark);
+  }
+
+  .error-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .error-animation {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .error-number {
+    font-size: 10rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .error-icon {
+    color: var(--primary-green);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .error-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .error-text {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .btn-outline-custom {
+    background: transparent;
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-custom:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .quick-links {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .quick-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-gray);
+  }
+
+  .links-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .links-grid a {
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .links-grid a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    transition: width 0.3s ease;
+  }
+
+  .links-grid a:hover {
+    color: var(--primary-green);
+  }
+
+  .links-grid a:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .error-number {
+      font-size: 6rem;
+    }
+
+    .error-title {
+      font-size: 2rem;
+    }
+
+    .error-text {
+      font-size: 1rem;
+    }
+
+    .error-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .error-actions .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from 'gsap';
+
+  // Animate error content
+  gsap.from('.error-animation', {
+    scale: 0.5,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'back.out(1.7)'
+  });
+
+  gsap.from('.error-title, .error-text', {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    delay: 0.3,
+    ease: 'power3.out'
+  });
+
+  gsap.from('.error-actions .btn', {
+    y: 20,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.1,
+    delay: 0.6,
+    ease: 'power3.out'
+  });
+
+  gsap.from('.quick-links', {
+    y: 20,
+    opacity: 0,
+    duration: 0.6,
+    delay: 0.9,
+    ease: 'power3.out'
+  });
+</script>
