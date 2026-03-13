@@ -1,7 +1,7 @@
 import { products } from '../data/products';
 
 export async function GET() {
-  const baseUrl = 'https://yigaiabiotics.com';
+  const baseUrl = 'https://yigaliabiotics.com';
   
   const pages = [
     { url: '', changefreq: 'daily', priority: '1.0' },

@@ -1,5 +1,5 @@
-# Yigaia Biotics - Robots.txt
-# https://yigaiabiotics.com
+# Yigalia Biotics - Robots.txt
+# https://yigalia.in
 
 # Allow all major search engine crawlers
 User-agent: Googlebot
@@ -40,4 +40,4 @@ User-agent: anthropic-ai
 Disallow: /
 
 # Sitemap location
-Sitemap: https://yigaiabiotics.com/sitemap.xml
+Sitemap: https://yigalia.in/sitemap.xml

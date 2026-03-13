@@ -17,11 +17,11 @@ const productListSchema = {
       "@type": "Drug",
       "name": product.name,
       "description": product.description,
-      "image": `https://yigaiabiotics.com${product.image}`,
-      "url": `https://yigaiabiotics.com/products/${product.id}`,
+      "image": `https://yigaliabiotics.com${product.image}`,
+      "url": `https://yigaliabiotics.com/products/${product.id}`,
       "manufacturer": {
         "@type": "Organization",
-        "name": "Yigaia Biotics"
+        "name": "Yigalia Biotics"
       }
     }
   }))
@@ -29,9 +29,9 @@ const productListSchema = {
 ---
 
 <Layout 
-  title="Pharmaceutical Products - Quality Medicines | Yigaia Biotics" 
-  description="Browse our comprehensive range of quality pharmaceutical products including antibiotics, pain relief, diabetes management, and more. Trusted medicines by Yigaia Biotics."
-  keywords="pharmaceutical products, medicines, antibiotics, pain relief, diabetes medication, calcium supplements, antidiabetic drugs, Yigaia Biotics, quality medicines India"
+  title="Pharmaceutical Products - Quality Medicines | Yigalia Biotics" 
+  description="Browse our comprehensive range of quality pharmaceutical products including antibiotics, pain relief, diabetes management, and more. Trusted medicines by Yigalia Biotics."
+  keywords="pharmaceutical products, medicines, antibiotics, pain relief, diabetes medication, calcium supplements, antidiabetic drugs, Yigalia Biotics, quality medicines India"
 >
   <Fragment slot="head">
     <!-- BreadcrumbList Schema -->
@@ -43,13 +43,13 @@ const productListSchema = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://yigaiabiotics.com"
+          "item": "https://yigaliabiotics.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://yigaiabiotics.com/products"
+          "item": "https://yigaliabiotics.com/products"
         }
       ]
     })} />
@@ -97,7 +97,7 @@ const productListSchema = {
               <div class="product-image-wrapper">
                 <img 
                   src={product.image} 
-                  alt={`${product.name} - ${product.composition} - ${product.category} by Yigaia Biotics`}
+                  alt={`${product.name} - ${product.composition} - ${product.category} by Yigalia Biotics`}
                   title={`${product.name} - ${product.uses}`}
                   class="product-image" 
                   loading={index < 6 ? "eager" : "lazy"}

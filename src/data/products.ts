@@ -23,14 +23,14 @@ export const products: Product[] = [
     keywords: "calcium supplement, bone health, osteoporosis prevention, vitamin D3, magnesium, zinc"
   },
   {
-    id: "egapide-m1",
-    name: "Egapide-M1",
-    image: "/Egapide-M1.png",
+    id: "egapride-m1",
+    name: "Egapride-M1",
+    image: "/Egapride-M1.png",
     category: "Antidiabetic",
     composition: "Glimepiride + Metformin",
     uses: "Type 2 diabetes mellitus management",
     dosage: "As prescribed by physician, usually once or twice daily with meals",
-    description: "Egapide-M1 combines two effective antidiabetic agents to help control blood sugar levels in patients with type 2 diabetes.",
+    description: "Egapride-M1 combines two effective antidiabetic agents to help control blood sugar levels in patients with type 2 diabetes.",
     keywords: "diabetes medication, type 2 diabetes, glimepiride, metformin, blood sugar control, antidiabetic"
   },
   {
@@ -125,12 +125,12 @@ export const products: Product[] = [
     id: "osteroid-gm",
     name: "Osteroid-GM",
     image: "/Osteroid-GM.png",
-    category: "Topical Corticosteroid + Antibiotic",
-    composition: "Clobetasol Propionate + Gentamicin + Miconazole",
-    uses: "Inflammatory skin conditions with bacterial and fungal infections, eczema, dermatitis, psoriasis",
-    dosage: "Apply thin layer on affected area twice daily or as prescribed by physician",
-    description: "Osteroid-GM is a triple-action topical formulation combining a potent corticosteroid with antibiotic and antifungal agents for comprehensive treatment of complex skin conditions.",
-    keywords: "clobetasol cream, skin infection treatment, eczema treatment, dermatitis cream, antifungal antibiotic cream, psoriasis treatment, topical steroid"
+    category: "Joint Health Supplement",
+    composition: "Diacerein, Glucosamine Sulphate Potassium Chloride & Methyl Sulfonyl Methane",
+    uses: "Joint health and mobility support, osteoarthritis management, cartilage protection and repair",
+    dosage: "As prescribed by physician, usually one tablet twice daily with meals",
+    description: "Osteroid-GM is a comprehensive joint health supplement that combines Diacerein, Glucosamine Sulphate, and MSM to support joint health and mobility, helping maintain healthy cartilage and reduce joint discomfort.",
+    keywords: "joint health, osteoarthritis, glucosamine, diacerein, MSM, cartilage support, joint mobility, bone health supplement"
   },
   {
     id: "poll-40",

@@ -2,8 +2,8 @@
   "name": "yigalia-biotics",
   "type": "module",
   "version": "1.0.0",
-  "description": "Yigaia Biotics - Trusted experts in quality pharmaceutical products",
-  "author": "Yigaia Biotics",
+  "description": "Yigalia Biotics - Trusted experts in quality pharmaceutical products",
+  "author": "Yigalia Biotics",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

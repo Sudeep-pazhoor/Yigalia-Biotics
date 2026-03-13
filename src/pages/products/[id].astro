@@ -15,7 +15,7 @@ const { product } = Astro.props;
 const relatedProducts = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
 
 // SEO-optimized meta description
-const seoDescription = `${product.name} - ${product.composition}. ${product.description} Used for ${product.uses}. Quality pharmaceutical product by Yigaia Biotics.`;
+const seoDescription = `${product.name} - ${product.composition}. ${product.description} Used for ${product.uses}. Quality pharmaceutical product by Yigalia Biotics.`;
 
 // Structured data for product
 const productSchema = {
@@ -23,10 +23,10 @@ const productSchema = {
   "@type": "Drug",
   "name": product.name,
   "description": product.description,
-  "image": `https://yigaiabiotics.com${product.image}`,
+  "image": `https://yigaliabiotics.com${product.image}`,
   "manufacturer": {
     "@type": "Organization",
-    "name": "Yigaia Biotics"
+    "name": "Yigalia Biotics"
   },
   "activeIngredient": product.composition,
   "dosageForm": "Tablet/Capsule",
@@ -44,35 +44,35 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://yigaiabiotics.com"
+      "item": "https://yigaliabiotics.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Products",
-      "item": "https://yigaiabiotics.com/products"
+      "item": "https://yigaliabiotics.com/products"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": product.name,
-      "item": `https://yigaiabiotics.com/products/${product.id}`
+      "item": `https://yigaliabiotics.com/products/${product.id}`
     }
   ]
 };
 ---
 
 <Layout 
-  title={`${product.name} - ${product.composition} | Yigaia Biotics`}
+  title={`${product.name} - ${product.composition} | Yigalia Biotics`}
   description={seoDescription}
   image={product.image}
   type="product"
-  keywords={product.keywords || `${product.name}, ${product.composition}, ${product.category}, pharmaceutical, medicine, ${product.uses}, Yigaia Biotics, Mumbai`}
+  keywords={product.keywords || `${product.name}, ${product.composition}, ${product.category}, pharmaceutical, medicine, ${product.uses}, Yigalia Biotics, Mumbai`}
 >
   <Fragment slot="head">
     <!-- Additional SEO meta tags -->
     <meta name="keywords" content={product.keywords || `${product.name}, ${product.composition}, ${product.category}, pharmaceutical, medicine, ${product.uses}`} />
-    <link rel="canonical" href={`https://yigaiabiotics.com/products/${product.id}`} />
+    <link rel="canonical" href={`https://yigaliabiotics.com/products/${product.id}`} />
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
@@ -95,7 +95,7 @@ const breadcrumbSchema = {
           <div class="product-image-container" id="imageContainer">
             <img 
               src={product.image} 
-              alt={`${product.name} - ${product.composition} - ${product.category} by Yigaia Biotics`}
+              alt={`${product.name} - ${product.composition} - ${product.category} by Yigalia Biotics`}
               title={`${product.name} - ${product.uses}`}
               class="detail-image" 
               id="productImage"

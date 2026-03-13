@@ -1,4 +1,4 @@
-# Yigaia Biotics - Pharmaceutical Website
+# Yigalia Biotics - Pharmaceutical Website
 
 A modern, responsive pharmaceutical website built with Astro.js, featuring dark theme design, smooth animations, and comprehensive product showcase.
 
